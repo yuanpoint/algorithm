@@ -8,13 +8,13 @@ public class Test {
         Node node2 = new Node(2);
         Node node3 = new Node(3);
 
-        node1.append(node2).append(node3);
+        node1.append(node2).append(node3).append(new Node(4));
 
-        System.out.println(node1.next);
-        System.out.println(node2);
-        System.out.println(node2.next);
-        System.out.println(node3);
+        node1.show();
 
+        node2.after(new Node(5));
+
+        node1.show();
 
     }
 }
