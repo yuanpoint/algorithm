@@ -7,8 +7,11 @@ public class testBinaryTree {
      * @param args
      */
     public static void main(String[] args) {
+
+        //初始化二叉树对象
        binaryTree binTree = new binaryTree();
 
+       //设置根节点
         TreeNode root = new TreeNode(1);
         binTree.setRoot(root);
 
@@ -19,6 +22,23 @@ public class testBinaryTree {
         TreeNode rightNode = new TreeNode(3);
         root.setRightNode(rightNode);
 
+        //给左节点设置左右节点
+        leftNode.setLeftNode(new TreeNode(4));
+        leftNode.setRightNode(new TreeNode(5));
+
+        //给右节点设置左右节点
+        rightNode.setLeftNode(new TreeNode(6));
+        rightNode.setRightNode(new TreeNode(7));
+
+
+        //通过前序遍历遍历二叉树
+        binTree.frontShow();
+        System.out.println("=================");
+        //中序遍历
+        binTree.midShow();
+        System.out.println("=================");
+        //后序遍历
+        binTree.afterShow();
 
     }
 }
