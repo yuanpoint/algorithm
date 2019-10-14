@@ -36,4 +36,8 @@ public class binaryTree {
     public void afterShow(){
         root.afterShow();
     }
+
+    public TreeNode frontSearch(int i) {
+        return root.frontSearch(i);
+    }
 }

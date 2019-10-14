@@ -40,5 +40,8 @@ public class testBinaryTree {
         //后序遍历
         binTree.afterShow();
 
+        //通过前序查找，找相应的节点
+        TreeNode nodes = binTree.frontSearch(5);
+        System.out.println(nodes);
     }
 }
