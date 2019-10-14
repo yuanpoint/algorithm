@@ -43,5 +43,9 @@ public class testBinaryTree {
         //通过前序查找，找相应的节点
         TreeNode nodes = binTree.frontSearch(5);
         System.out.println(nodes);
+
+        //删除节点
+        binTree.delete(7);
+
     }
 }

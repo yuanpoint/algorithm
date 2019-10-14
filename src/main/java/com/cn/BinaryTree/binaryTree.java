@@ -40,4 +40,12 @@ public class binaryTree {
     public TreeNode frontSearch(int i) {
         return root.frontSearch(i);
     }
+
+    /**
+     * 删除节点
+     * @param i
+     */
+    public void delete(int i) {
+        root.delete(i);
+    }
 }

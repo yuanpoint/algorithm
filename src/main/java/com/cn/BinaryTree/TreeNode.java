@@ -15,6 +15,36 @@ public class TreeNode {
     }
 
     /**
+     * 删除节点
+     * @param i
+     */
+    public  void delete(int i) {
+        //先指定夫节点
+        TreeNode parent = this;
+        //如果左节点正好是被删除的节点，直接就让他为null
+        if(parent.leftNode!=null&&parent.leftNode.value == i){
+            parent.leftNode = null;
+            return;
+        }
+        //如果右节点正好是被删除的节点，直接让他为null
+        if(parent.rightNode!=null&&parent.rightNode.value == i){
+            parent.rightNode = null;
+            return;
+        }
+        //如果左右节点都不是，那么则递归调用
+        //先调用做节点
+        parent=leftNode;
+        if(parent!=null){
+            parent.delete(i);
+        }
+        //然后掉用右节点
+        parent = rightNode;
+        if(parent!=null){
+            parent.delete(i);
+        }
+    }
+
+    /**
      * 设置左节点
      * @param leftNode
      */
